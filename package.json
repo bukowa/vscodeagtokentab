@@ -2,7 +2,7 @@
   "name": "vscodeagtokentab",
   "displayName": "Antigravity Context Monitor",
   "description": "Real-time context token counter in the VS Code status bar for Antigravity sessions.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "bukowa",
   "license": "MIT",
   "icon": "resources/icon.png",

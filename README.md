@@ -2,7 +2,7 @@
 
 Minimal, real-time context token counter in the VS Code status bar for Antigravity sessions.
 
-![Antigravity Context Monitor](resources/preview.png)
+![Antigravity Context Monitor](https://raw.githubusercontent.com/bukowa/vscodeagtokentab/main/resources/preview.png)
 
 ## Highlights
 
