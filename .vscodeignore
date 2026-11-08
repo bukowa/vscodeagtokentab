@@ -1,0 +1,23 @@
+.vscode/**
+.github/**
+src/**
+test/**
+out/**
+node_modules/**
+*.vsix
+.pkg_staging/**
+build_vsix.mjs
+esbuild.config.mjs
+tsconfig.json
+*.log
+
+# Exclude sourcemaps from distribution
+dist/**/*.map
+
+# Explicitly keep the core extension bundle and package metadata
+!dist/extension.cjs
+!package.json
+!README.md
+!LICENSE
+!resources/**
+

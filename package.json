@@ -1,0 +1,61 @@
+{
+  "name": "vscodeagtokentab",
+  "displayName": "Antigravity Context Monitor",
+  "description": "Real-time context token counter in the VS Code status bar for Antigravity sessions.",
+  "version": "0.1.0",
+  "publisher": "bukowa",
+  "license": "MIT",
+  "icon": "resources/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bukowa/vscodeagtokentab"
+  },
+  "keywords": [
+    "antigravity",
+    "token-counter",
+    "context-window",
+    "status-bar",
+    "ai",
+    "llm",
+    "gemini"
+  ],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "AI",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.cjs",
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "compile": "tsc -p ./",
+    "watch": "node esbuild.config.mjs --watch",
+    "build": "node esbuild.config.mjs",
+    "test": "npm run compile && node --test test/monitor.test.mjs",
+    "package": "node build_vsix.mjs"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "antigravityMonitor.refresh",
+        "title": "Antigravity: Refresh Context Monitor",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "antigravityMonitor.openTranscript",
+        "title": "Antigravity: Open Raw Transcript",
+        "icon": "$(file-code)"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/vscode": "^1.80.0",
+    "esbuild": "^0.21.5",
+    "typescript": "^5.4.5"
+  }
+}
